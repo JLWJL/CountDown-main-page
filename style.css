@@ -37,6 +37,14 @@ button{
 	cursor:pointer;
 }
 
+.show{
+	display:initial;
+}
+
+.hide{
+	display:none;
+}
+
 
 
 .top-wrap{
@@ -77,6 +85,11 @@ button{
     transition: background 0.5s ease;
 }
 
+.nav-top-menu:last-child{
+	margin-right:0;
+}
+
+
 .nav-top-menu:hover{
 	background:#00501f;
 }
@@ -92,6 +105,28 @@ button{
 	background:white;
 	text-transform: uppercase;	    
 	margin-bottom: 4px;
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+}
+
+.mob-menu{
+	display:none;
+	font-size: 1.8em;
+
+	text-align: center;
+
+	font-weight: lighter;
+
+	color: #00501f;
+
+	background: #e9e9e9;
+
+	padding: 2px 7px;
+
+	margin-left: 9px;
 }
 
 .nav-middle a {
@@ -253,9 +288,6 @@ button{
 				
 			}
 
-			.show{
-				display:initial;
-			}
 
 			.sr-opts-list{
 				position: absolute;
@@ -346,5 +378,39 @@ button{
 		flex:1;
 	}
 	
+	.mob-login-btn{
+		display: initial;
+		margin-right:5px;
+		font-size:1em;
+	}
+
+	.mob-login-btn .icon-container{
+		height: 31px;
+		background: #51a931;
+		width: 31px;
+		font-size: 1.3em;
+		padding-top: 6px;
+		
+		transition:all 0.4s ease;
+	}
+		.mob-login-btn .icon-container:hover{
+			background-color:#83b640;
+		}
+		.mob-login-btn .icon-container ~ span{
+			display: block;
+			color: #51a931;
+			font-size: 0.6em;
+			margin-top:4px;
+		}
+
+
+	.mob-menu{
+		display:initial;
+	}
+	
+	.nav-middle-right-info div:not(:last-child){
+		display: none;
+	}
+
 	
 }
