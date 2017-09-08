@@ -24,7 +24,7 @@ a{
 
 img{
 	max-width:100%;
-	max-height:100%;
+	height:auto;
 }
 
 input{
@@ -37,9 +37,7 @@ button{
 	cursor:pointer;
 }
 
-.show{
-	display:initial;
-}
+
 
 .hide{
 	display:none;
@@ -48,7 +46,7 @@ button{
 
 
 .top-wrap{
-	/*width:1200px;*/
+	width:1200px;
 	margin:0 auto;
 }
 
@@ -219,17 +217,31 @@ button{
 		display:flex;
 	}
 
-		.nav-bottom-menu{
-			flex:auto;
-			padding:11px 15px 14px;
+
+		.btn-green{
 			color:#51a931;
-			font-size: 1.7rem;
-			
 			-webkit-transition: all 0.4s ease;
 			   -moz-transition: all 0.4s ease;
 			    -ms-transition: all 0.4s ease;
 			     -o-transition: all 0.4s ease;
 			        transition: all 0.4s ease;
+		}
+
+		.btn-green:hover{
+			color:#00501f;
+		}
+
+		.nav-bottom-menu{
+			flex:auto;
+			padding:11px 15px 14px;
+			/*color:#51a931;*/
+			font-size: 1.7rem;
+			
+			/*-webkit-transition: all 0.4s ease;
+			   -moz-transition: all 0.4s ease;
+			    -ms-transition: all 0.4s ease;
+			     -o-transition: all 0.4s ease;
+			        transition: all 0.4s ease;*/
 		}
 		
 
@@ -238,7 +250,7 @@ button{
 		}
 
 		.nav-bottom-menu:hover{
-			color:#00501f;
+			/*color:#00501f;*/
 			background:#eee;
 		}
 
@@ -316,9 +328,110 @@ button{
 			}
 
 
-/**
+
+
+/*****************
+	Main Area
+******************/
+main{
+	background-color:#fff;
+}
+
+
+/*****************
+	Carousel
+******************/
+
+
+
+
+/*****************
+	Three column
+******************/
+.c-three-col{
+	display: flex;
+	padding:15px 15px 10px;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	
+	height:275px; 
+}
+
+	.col-left,.col-middle,.col-right{
+		flex:1;
+		margin: 0 5px;
+	}
+
+		.useful-links{
+			display:flex;
+			flex-direction: column;
+			text-align: left;
+			position:relative;
+			flex:1;
+		}
+			.useful-link{
+				font-size:2.4rem;
+				line-height: 5.7rem;
+				display:flex;
+				-webkit-justify-content: space-between;
+				        justify-content: space-between;
+				-webkit-align-items: center;
+				        align-items: center;
+				border-bottom: 1px solid #51a931;
+				position: relative;
+				
+				height:20%;
+				
+			}
+
+			.useful-link:first-child{
+				border-top: 1px solid #51a931;
+			}
+
+			.useful-link span{
+				height:100%;
+				display: flex;
+				-webkit-align-items: center;
+				        align-items: center;
+			}
+			
+			.useful-link i{
+				transition: all 0.3s ease;
+			}
+
+			.useful-link:hover i{
+				transition: all 0.3s ease;
+				transform:translate(3px);
+			}
+				
+			.useful-link img{
+				max-width: 	100%;
+				height:100%;
+			}
+
+
+	.col-middle{
+		background:url("image/article/brand_homepage-promo-tile-420x272px_v2.jpg");
+		background-size:cover;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+	.col-right{
+		background: url(image/article/pro6888-eesu-homepage-banner-v4.gif);
+		background-size:cover;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+
+
+
+
+
+/*****************
 	Media Query
-**/
+******************/
 
 
 @media screen and (max-width: 1200px){
@@ -331,6 +444,10 @@ button{
 		font-size:1.3rem;
 	}
 	
+	.c-three-col{
+		height:216px;
+	}
+
 }
 
 
@@ -367,12 +484,31 @@ button{
 	.sr-opt-btn{
 		display:initial;
 	}
+
+	.c-three-col{
+		height:172px;
+	}
+
 }
 
 @media screen and (max-width:768px){
+	.top-wrap{
+		width:100%;
+	}
+
 	.nav-top{
 		width:100%;
 	}
+
+	.nav-bottom{
+		display:none;
+	}
+
+	.nav-top-menu, .nav-middle-right-info, .nav-bottom-menu{
+		font-size:1.3rem;
+	}
+	
+
 
 	.nav-top-menu{
 		flex:1;
@@ -413,4 +549,10 @@ button{
 	}
 
 	
+}
+
+
+
+.show{
+	display:initial;
 }
