@@ -359,7 +359,8 @@ main{
 
 	.col-left,.col-middle,.col-right{
 		flex:1;
-		margin: 0 5px;
+		margin: 10px 5px;
+		height:100%;
 	}
 
 		.useful-links{
@@ -394,6 +395,10 @@ main{
 				-webkit-align-items: center;
 				        align-items: center;
 			}
+
+			.useful-link span span{
+				width:100%;
+			}
 			
 			.useful-link i{
 				transition: all 0.3s ease;
@@ -410,18 +415,25 @@ main{
 			}
 
 
-	.col-middle{
+	#article-link-1{
 		background:url("image/article/brand_homepage-promo-tile-420x272px_v2.jpg");
 		background-size:cover;
 		background-repeat: no-repeat;
+		background-position: left center;/*Define start point*/
+
 		cursor: pointer;
+		height:inherit;
+		
 	}
 
-	.col-right{
+	#article-link-2{
 		background: url(image/article/pro6888-eesu-homepage-banner-v4.gif);
 		background-size:cover;
 		background-repeat: no-repeat;
+		background-position: left center;/*Define start point*/
+
 		cursor: pointer;
+		height:inherit;
 	}
 
 
@@ -449,6 +461,8 @@ main{
 	}
 
 }
+
+
 
 
 @media screen and (max-width:992px){
@@ -489,7 +503,15 @@ main{
 		height:172px;
 	}
 
+	.useful-link{
+		font-size:2rem;
+		line-height: 4.4rem;
+	}
+
 }
+
+
+
 
 @media screen and (max-width:768px){
 	.top-wrap{
@@ -508,7 +530,6 @@ main{
 		font-size:1.3rem;
 	}
 	
-
 
 	.nav-top-menu{
 		flex:1;
@@ -548,9 +569,51 @@ main{
 		display: none;
 	}
 
+
+	.c-three-col{
+		flex-wrap:wrap;
+		height:auto;
+	}
+
+	.col-left,.col-middle,.col-right {
+		flex:1 1 100%;	
+	}
+	
+	.col-left{
+		order:2;
+		height:262px;
+	}
+
+	.col-middle{
+		order:1;
+		height:300px;
+	}
+
+	.col-right{
+		order:3;
+		height:300px;
+	}
+
+	.useful-link{
+		font-size:2.2rem;
+		line-height: 3.6rem;
+	}
 	
 }
 
+
+@media screen and (max-width:580px) {
+	.col-middle, .col-right{
+		height:240px;
+	}
+}
+
+
+@media screen and (max-width:420px) {
+	.col-middle, .col-right{
+		height:190px;
+	}
+}
 
 
 .show{
