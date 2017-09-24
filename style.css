@@ -349,7 +349,7 @@ main{
 	Three column
 ******************/
 .c-three-col{
-	display: flex;
+	/*display: flex;*/
 	padding:15px 15px 10px;
 	-webkit-justify-content: space-between;
 	        justify-content: space-between;
@@ -357,13 +357,23 @@ main{
 	height:275px; 
 }
 
+.row-2{
+	padding:0 15px 10px;	
+}
+
+	.col-2{
+		flex:2;	
+		margin: 10px 5px;
+		height:100%;
+	}
+
 	.col-left,.col-middle,.col-right{
 		flex:1;
 		margin: 10px 5px;
 		height:100%;
 	}
 
-		.useful-links{
+		.useful-links, .quick-links{
 			display:flex;
 			flex-direction: column;
 			text-align: left;
@@ -415,19 +425,53 @@ main{
 			}
 
 
+			/* Quick links */
+			.quick-links span:not(:first-child){
+				margin-left: 10px;
+				line-height: 1.8;
+				font-size: 2.1rem;
+			}
+
+
+			.quick-links-title{
+				font-size: 35px;
+				margin-bottom: 10px;
+			}
+
+
+
+			.quick-link{
+				margin-left: 10px;
+				color:#065f33;
+				transition:all 0.4s ease;
+			}
+
+			.quick-link:hover{
+				color:#83b640;
+				margin-left:15px;
+			}
+				.quick-links i{
+					font-size:1rem;
+					margin-right: 10px;
+				}
+
+
+
+
 	#article-link-1{
 		background:url("image/article/brand_homepage-promo-tile-420x272px_v2.jpg");
-		background-size:cover;
-		background-repeat: no-repeat;
-		background-position: left center;/*Define start point*/
-
-		cursor: pointer;
-		height:inherit;
-		
 	}
 
 	#article-link-2{
 		background: url(image/article/pro6888-eesu-homepage-banner-v4.gif);
+	}
+
+	#article-link-3{
+		background: url(image/article/wotm-promotile-770x272-doctor.jpg)	
+	}
+
+
+	#article-link-1, #article-link-2, #article-link-3{
 		background-size:cover;
 		background-repeat: no-repeat;
 		background-position: left center;/*Define start point*/
@@ -436,6 +480,7 @@ main{
 		height:inherit;
 	}
 
+	
 
 
 
@@ -460,6 +505,20 @@ main{
 		height:216px;
 	}
 
+	.quick-links-title{
+		font-size: 2.8rem;
+	}
+	
+	.quick-links span:not(:first-child){
+				/*margin-left: 10px;*/
+				line-height: 1.5;
+				font-size: 2rem;
+	}
+
+/*		.quick-link{
+			font-size: 2rem;
+			line-height: 1.5;
+		}*/
 }
 
 
@@ -507,6 +566,14 @@ main{
 		font-size:2rem;
 		line-height: 4.4rem;
 	}
+
+	.quick-links span:not(:first-child){
+				/*margin-left: 10px;*/
+				line-height: 1.5;
+				font-size: 1.5rem;
+	}
+
+
 
 }
 
@@ -597,6 +664,10 @@ main{
 	.useful-link{
 		font-size:2.2rem;
 		line-height: 3.6rem;
+	}
+
+	.row-2{
+		display: none;
 	}
 	
 }
