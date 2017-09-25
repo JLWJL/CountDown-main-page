@@ -438,15 +438,16 @@ main{
 				margin-bottom: 10px;
 			}
 
-
-
-			.quick-link{
-				margin-left: 10px;
+			.btn-dark-green{
 				color:#065f33;
 				transition:all 0.4s ease;
 			}
 
-			.quick-link:hover{
+			.quick-link{
+				margin-left: 10px;
+			}
+
+			.quick-links .btn-dark-green:hover{
 				color:#83b640;
 				margin-left:15px;
 			}
@@ -484,17 +485,21 @@ main{
 /* Bottom links */
 .btm-links-area{
 	background:#f0f0f0;
-	padding:20px 10px 30px;
+	padding:0px 10px 30px;
 	margin-top:80px;
-	
+		
 	position:relative;
+}
+
+.btm-links-area .c-flex-wrap{
+	-webkit-justify-content: center;
+	        justify-content: center;
 }
 
 .social-media{
 	position:absolute;
 	right:60px;
 	top:-16px;
-	margin-bottom: 20px;
 }
 
 .social-media ul li{
@@ -543,11 +548,6 @@ main{
 
 
 
-.btm-links-area .c-flex-wrap{
-	-webkit-justify-content: center;
-	        justify-content: center;
-}
-
 .links-half{
 	display:flex;
 	-webkit-justify-content: space-around;
@@ -558,12 +558,27 @@ main{
 .li-link{
 	flex-basis:165px;
 	text-align:left;
-	margin:0 10px 0 5px;
+	margin:27px 22px 0 8px;
 }
 	
+	.li-link *{
+		color: #00501f;
+		transition: all 0.3s ease;
+	}
+
+	.li-link *:hover{
+		color: #83B640;
+	}
+
+	.li-link h4{
+		border-bottom: #00501F solid 1px;
+	}
+
 	.li-link ul{
 		list-style-type: none;
 	}
+
+
 
 
 
@@ -601,6 +616,16 @@ main{
 			font-size: 2rem;
 			line-height: 1.5;
 		}*/
+
+	.btm-links-area .c-flex-wrap{
+		flex-wrap:wrap;
+	}
+
+
+	.li-link{
+		flex-basis:286px;
+	}
+
 }
 
 
@@ -655,7 +680,9 @@ main{
 				font-size: 1.5rem;
 	}
 
-
+	.li-link{
+		flex-basis:210px;
+	}
 
 }
 
@@ -750,6 +777,14 @@ main{
 
 	.row-2{
 		display: none;
+	}
+
+	.li-link{
+		flex-basis:100%;
+	}
+
+	.li-link ul li{
+		line-height: 1.8;
 	}
 	
 }
