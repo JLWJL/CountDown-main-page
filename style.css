@@ -481,7 +481,89 @@ main{
 	}
 
 	
+/* Bottom links */
+.btm-links-area{
+	background:#f0f0f0;
+	padding:20px 10px 30px;
+	margin-top:80px;
+	
+	position:relative;
+}
 
+.social-media{
+	position:absolute;
+	right:60px;
+	top:-16px;
+	margin-bottom: 20px;
+}
+
+.social-media ul li{
+	display:inline-block;
+	border:solid white 2px;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	height:35px;
+	width:35px;
+	overflow: hidden;
+}
+
+.social-media ul li:last-child{
+	margin-left: 55px;
+}
+
+	.social-media ul li a{
+		background:red url("image/social.png") no-repeat;
+		display:block;
+		width:32px;
+		height:32px;
+		cursor:pointer;
+	}
+
+	#fb{
+		background-position: left top;
+	}
+
+	#linkedin{
+		background-position: left -64px;
+	}
+
+	#pinterest{
+		background-position: left -128px;
+	}
+
+	#youtube{
+		background-position: left -288px;
+	}
+
+	#unknown{
+		background:url("image/wr_btn.png") no-repeat left top;
+		background-size:32px 32px;
+
+	}
+
+
+
+.btm-links-area .c-flex-wrap{
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+
+.links-half{
+	display:flex;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+	
+}
+
+.li-link{
+	flex-basis:165px;
+	text-align:left;
+	margin:0 10px 0 5px;
+}
+	
+	.li-link ul{
+		list-style-type: none;
+	}
 
 
 
