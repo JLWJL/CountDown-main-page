@@ -580,6 +580,41 @@ main{
 
 
 
+/*****************
+	Footer
+******************/
+
+.footer{
+	background: linear-gradient(to right,rgb(149, 193, 31) 0%, rgb(0, 80, 31) 100%);
+	padding:15px;
+
+	display:flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	
+	-webkit-align-items: center;
+	        align-items: center;
+	
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+	.terms, .terms a{
+		color:white;
+		font-size: 1.6rem;
+	}
+	
+	.footer-logo{
+		flex-basis:200px;
+		/*background: url("image/footer-logo.png") left top/100% 100% cover;*/
+	}
+
+	.footer-logo img{
+		
+	}
+
+
 
 
 
